@@ -1,19 +1,22 @@
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
 
+// Styled
 import { Side } from './styles';
-import Logo from '~/assets/img/kadoo.png';
+
+// Logout function
 import { logout } from '~/services/auth';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
+// Logo
+import Logo from '~/assets/img/kadoo.png';
 
+// Icons
+import { FiLogOut } from 'react-icons/fi';
 
+// Connection Redux
 import { connect } from 'react-redux';
-// import { useEffect } from 'react';
 
 function Sidebar({ drag, activeMenu, itensMenu, dispatch }) {
-
 
     function toggleMenu(menu) {
         return {
@@ -29,15 +32,25 @@ function Sidebar({ drag, activeMenu, itensMenu, dispatch }) {
             </div>
             <ul>
                 {itensMenu.map(item => (
-                    <li className={item.name === activeMenu.name ? 'active' : ''}>
+                    <li key={ item.name } className={item.name === activeMenu.name ? 'active' : ''}>
                         <Link to={ item.path } onClick={() => dispatch(toggleMenu(item)) }>
-                            <FontAwesomeIcon icon={ item.icon } style={{ marginRight: 3}}/> { item.name }
+                            <span className="icon">
+                                { item.icon }
+                            </span>
+                            <span className="item">
+                                { item.name }
+                            </span>
                         </Link>
                     </li>
                 ))}
                 <li>
-                    <Link onClick={() => logout()} to={`/login`}>
-                        <FontAwesomeIcon icon={faSignInAlt} style={{ marginRight: 3}}/> Sair
+                    <Link onClick={() => logout()} to={`/sis/login`}>
+                        <span className="icon">
+                            <FiLogOut />
+                        </span>
+                        <span className="item">
+                            Sair
+                        </span>
                     </Link>
                 </li>
             </ul>

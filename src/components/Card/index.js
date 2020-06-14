@@ -30,7 +30,7 @@ export const Card = styled.div`
     justify-content: space-between;
 
     h3 {
-      font-size: 1.2rem;
+      font-size: 1rem;
       font-weight: 600;
       color: #48465b;
     }
@@ -44,10 +44,10 @@ export const Card = styled.div`
       button, a {
         margin: 0 3px;
         cursor: pointer;
-        font-size: 13px;
+        font-size: 12px;
         background: #b20710;
         padding: 8px 10px;
-        border-radius: 60px;
+        border-radius: 6px;
         color: #fff;
         border: none;
         font-weight: bold;
@@ -56,8 +56,9 @@ export const Card = styled.div`
         transition: all 0.2s;
 
         &:hover {
-          opacity: 0.95;
-          box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+            filter: brightness(90%);
+          /* opacity: 0.95; */
+          /* box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important; */
         }
       }
     }
@@ -71,6 +72,29 @@ export const Card = styled.div`
 
     @media screen and (max-width: 790px) {
       padding: 1.5rem .5rem;
+    }
+
+    &.light-text {
+        p {
+            color: #777;
+        }
+    }
+  }
+
+  .card-actions {
+    padding: 0 1.25rem 1.25rem 1.25rem;
+    display: flex;
+
+    &.flex-end {
+        justify-content: flex-end;
+    }
+
+    &.center {
+        justify-content: center;
+    }
+
+    &.flex-start {
+        justify-content: flex-start;
     }
   }
 `;
@@ -89,10 +113,10 @@ export const CardDashboard = styled.div`
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
-  
+
   &.red {
-    border-left: 0.25rem solid #b20710;
-    color: #b20710;
+    border-left: 0.25rem solid #f64e60;
+    color: #f64e60;
   }
 
   &.green {

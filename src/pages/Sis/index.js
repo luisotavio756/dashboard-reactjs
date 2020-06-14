@@ -1,13 +1,20 @@
 import React, { useState, Suspense, lazy } from 'react';
-import { Switch, Route, useRouteMatch } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSignInAlt, faUser, faBars } from '@fortawesome/free-solid-svg-icons'
+// Icons
+import { FiMenu, FiUser, FiLogOut } from 'react-icons/fi';
 
-import Sidebar from '~/components/Sidebar';
+// Styled Components
+import Sidebar from './Sidebar';
 import { Wrap, Main, NavBar } from './styles';
 
 const Dashboard = lazy(() => import('./Dashboard'));
+const Tables = lazy(() => import('./Tables'));
+const Buttons = lazy(() => import('./Buttons'));
+const Cards = lazy(() => import('./Cards'));
+const Forms = lazy(() => import('./Forms'));
+const Alerts = lazy(() => import('./Alerts'));
+const Modals = lazy(() => import('./Modals'));
 
 export default function Sis() {
 
@@ -17,11 +24,9 @@ export default function Sis() {
             <Sidebar drag={drag} />
             <Main>
                 <NavBar>
-                    <FontAwesomeIcon className="toggle" style={{ marginLeft: drag ? 145 : 0}} icon={faBars} onClick={(e) => drag ? setDrag(false) : setDrag(true)} />
-                    <h4 className="name"><FontAwesomeIcon icon={faUser} /> Luis Otávio</h4>
-                    <ul>
-                        <li><FontAwesomeIcon icon={faSignInAlt} style={{ marginRight: 3}} size="2x"/></li>
-                    </ul>
+                    {/* <FiMenu className="toggle" style={{ marginLeft: drag ? 145 : 0}} onClick={(e) => drag ? setDrag(false) : setDrag(true)} /> */}
+                    <FiMenu className="toggle" style={{ marginLeft: drag ? 170 : 0}} onClick={(e) => drag ? setDrag(false) : setDrag(true)} />
+                    <span>Olá, <span className="name">{ 'Luis Otávio' }</span></span>
                 </NavBar>
                 <div className="content">
                     <div className="row">
@@ -33,8 +38,12 @@ export default function Sis() {
                             {/* Your pages */}
                             <Switch>
                                 <Route exact path='/' component={Dashboard} />
-                                <Route path='/page1' component={() => <h1>Your Page 1</h1>}/>
-                                <Route path='/page2' component={() => <h1>Your Page 2</h1>}/>
+                                <Route path='/tables' component={Tables}/>
+                                <Route path='/buttons' component={Buttons}/>
+                                <Route path='/cards' component={Cards}/>
+                                <Route path='/forms' component={Forms}/>
+                                <Route path='/alerts' component={Alerts}/>
+                                <Route path='/modals' component={Modals}/>
                             </Switch>
                         </Suspense>
                     </div>

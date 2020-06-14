@@ -34,11 +34,9 @@ export default function Routes(){
             }>
                 <Switch>
                     <Route path="/login" component={SignIn} />
-
                     <Provider store={store}>
                         <PrivateRoute path="/" component={Sis}/>
                     </Provider>
-
                 </Switch>
             </Suspense>
         </Router>

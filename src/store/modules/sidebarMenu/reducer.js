@@ -1,26 +1,48 @@
-import { faHome, faBookmark, faTable } from '@fortawesome/free-solid-svg-icons';
+// Icons
+import React from 'react';
+import { FiHome, FiGrid, FiBookmark, FiAperture, FiPhoneForwarded, FiBookOpen, FiInfo } from 'react-icons/fi';
 
 const INITIAL_STATE = {
     activeMenu: {
         name: 'Dashboard',
-        icon: faHome,
+        icon: <FiHome />,
         path: '/'
     },
     itens: [
         {
             name: 'Dashboard',
-            icon: faHome,
+            icon: <FiHome />,
             path: '/'
         },
         {
-            name: 'Page 1',
-            icon: faTable,
-            path: '/page1'
+            name: 'Tables',
+            icon: <FiGrid />,
+            path: '/tables'
         },
         {
-            name: 'Page 2',
-            icon: faBookmark,
-            path: '/page2'
+            name: 'Buttons',
+            icon: <FiAperture />,
+            path: '/buttons'
+        },
+        {
+            name: 'Cards',
+            icon: <FiBookmark />,
+            path: '/cards'
+        },
+        {
+            name: 'Forms',
+            icon: <FiPhoneForwarded />,
+            path: '/forms'
+        },
+        {
+            name: 'Alerts',
+            icon: <FiInfo />,
+            path: '/alerts'
+        },
+        {
+            name: 'Modals',
+            icon: <FiBookOpen />,
+            path: '/modals'
         },
     ],
 };

@@ -1,12 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCalendar, faPaperPlane, faInbox, faUsers } from '@fortawesome/free-solid-svg-icons';
+// Icons
+import { FiCalendar, FiMessageCircle, FiLogOut, FiUsers } from 'react-icons/fi';
 
 import { CardDashboard, Card } from '~/components/Card';
 import { Table } from '~/components/Table';
 
-import api from '~/services/api';
 import { getToken } from '~/services/auth';
 
 const config = {
@@ -35,6 +34,10 @@ let array = [
 ]
 
 export default function Dashboard() {
+    useEffect(() => {
+        document.title = 'Dashboard'
+    }, []);
+
     return (
         <>
             <div className="col-12 title">
@@ -49,7 +52,7 @@ export default function Dashboard() {
                                 <div className="number pulsate">34</div>
                             </div>
                             <div className="col-auto">
-                                <FontAwesomeIcon icon={faCalendar} size="3x" />
+                                <FiCalendar size="3em" />
                             </div>
                         </div>
                     </div>
@@ -64,7 +67,7 @@ export default function Dashboard() {
                                 <div className="number pulsate">0</div>
                             </div>
                             <div className="col-auto">
-                                <FontAwesomeIcon icon={faPaperPlane} size="3x" />
+                                <FiMessageCircle size="3em" />
                             </div>
                         </div>
                     </div>
@@ -79,7 +82,7 @@ export default function Dashboard() {
                                 <div className="number pulsate">0</div>
                             </div>
                             <div className="col-auto">
-                                <FontAwesomeIcon icon={faInbox} size="3x" />
+                                <FiMessageCircle size="3em" />
                             </div>
                         </div>
                     </div>
@@ -90,11 +93,11 @@ export default function Dashboard() {
                     <div className="card-body">
                         <div className="row">
                             <div className="col">
-                                <div className="title">Usuários</div>
+                                <div className="title">Users</div>
                                 <div className="number pulsate">0</div>
                             </div>
                             <div className="col-auto">
-                                <FontAwesomeIcon icon={faUsers} size="3x" />
+                                <FiUsers size="3em" />
                             </div>
                         </div>
                     </div>

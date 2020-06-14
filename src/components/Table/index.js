@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Table = styled.table`
   overflow-x: scroll;
   width: 100%;
-  display: table;  
+  display: table;
   border-collapse: collapse;
   border-spacing: 2px;
   border-color: grey;
@@ -28,17 +28,17 @@ export const Table = styled.table`
 
     th {
       vertical-align: bottom;
-      border-bottom: 2px solid #dee2e6; 
+      border-bottom: 2px solid #dee2e6;
       padding: .75rem;
     }
 
-    font-size: 14px;
+    font-size: 13px;
     color: #444;
   }
 
   tbody {
-    font-size: 14px;
-    color: #212529;
+    font-size: 13px;
+    color: #464e5f;
 
     display: table-row-group;
     vertical-align: middle;
@@ -55,29 +55,28 @@ export const Table = styled.table`
   .edit, .eraser, .info {
     margin: 0 3px;
     cursor: pointer;
-    font-size: 13px;
+    font-size: 12px;
     padding: 8px 10px;
     border-radius: 60px;
     color: #fff;
     border: none;
-    font-weight: bold;
+    font-weight: 400;
     transition: all 0.2s;
 
     &:hover {
-      opacity: 0.95;
-      /* box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important; */
+      filter: brightness(90%);
     }
   }
-  
+
   .edit {
-    background-color: #f3c200;
+    background-color: orange;
   }
 
   .eraser {
-    background: #b20710;
+    background: #f64e60;
   }
 
   .info {
-    background: #2e9fff;
+    background: #8950fc;
   }
 `;
