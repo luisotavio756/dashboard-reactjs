@@ -1,4 +1,5 @@
 
+
   
 
 <h1  align="center">Dashboard Template with ReactJS</h1>
@@ -23,6 +24,7 @@ This project was developed by me in a personal project, but, i am making open-so
 - [Styled Components](https://styled-components.com)
 - [React-Icons](https://react-icons.github.io/react-icons/)
 - [Styled-React-Modal](https://www.npmjs.com/package/styled-react-modal)
+
 
 ## :information_source: How To Use
 
@@ -49,6 +51,42 @@ $ yarn start or npm start
 # Enjoy!
 
 ```
+## :rocket: Some Components and Updates that i want contribs
+
+You can develop others, if make ideas.
+
+- Breadcrumb Component
+- Betters forms rows
+- Navbar with icons actions like config, profile, notifications...
+- Profile page
+- CSS beautiful and correct
+- Better responsiveness
+ 
+## :heart: How To Contrib
+
+For contrib, you need clone and create a branch with name of your contrib, example:
+
+```bash
+
+# Clone this repository
+
+$ git clone https://github.com/luisotavio756/dashboard-reactjs.git
+
+# Go into the repository
+
+$ cd dashboard-reactjs
+
+# Create a Branch
+OBS: Always add prefix "component-name_of_your_component" if you let create a new component, "update-name_of_component_updated", if you update some css or component.
+
+$ git branch component-breadcrumb
+
+# Checkout branch
+
+$ git checkout component-breadcrumb
+
+```
+After this, you can develop and contact my from see your contrib and add credits for you in this repository :smile: 
 
 ---
 
