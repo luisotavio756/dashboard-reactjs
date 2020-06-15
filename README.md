@@ -55,6 +55,7 @@ $ yarn start or npm start
 
 You can develop others, if make ideas.
 
+- Dark and Light Mode
 - Breadcrumb Component
 - Betters forms rows
 - Navbar with icons actions like config, profile, notifications...
