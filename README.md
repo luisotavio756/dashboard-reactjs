@@ -65,7 +65,7 @@ You may develop others, if you have any good idea.
  
 ## :heart: How To Contrib
 
-To contribute, you need to clone this repository and create a new branch with the name of your contribution, like:
+To contribute, you need to fork this repository and create a new branch with the name of your contribution, like:
 
 ```bash
 
