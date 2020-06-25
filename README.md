@@ -28,7 +28,7 @@ This project was developed by me in a personal project, but, i am making open-so
 
 ## :information_source: How To Use
 
-For use, you need clone and run this steps from your command line:
+In order to use it, you need to clone this repository and run the following steps from your command line:
 
 ```bash
 
@@ -51,21 +51,21 @@ $ yarn start or npm start
 # Enjoy!
 
 ```
-## :rocket: Some Components and Updates that i want contribs
+## :rocket: Some Components and Updates that I seek for contributions
 
-You can develop others, if make ideas.
+You may develop others, if you have any good idea.
 
 - Dark and Light Mode
 - Breadcrumb Component
 - Betters forms rows
 - Navbar with icons actions like config, profile, notifications...
 - Profile page
-- CSS beautiful and correct
+- Beautiful and correct CSS
 - Better responsiveness
  
 ## :heart: How To Contrib
 
-For contrib, you need clone and create a branch with name of your contrib, example:
+To contribute, you need to fork this repository and create a new branch with the name of your contribution, like:
 
 ```bash
 
@@ -87,7 +87,8 @@ $ git branch component-breadcrumb
 $ git checkout component-breadcrumb
 
 ```
-After this, you can develop and contact my from see your contrib and add credits for you in this repository :smile: 
+
+After this, you may develop the new feature. Once you are done, send a pull request and contact me to check your contribution and merge it into master. Also, I will add credits for you in this repository :smile:
 
 ---
 
